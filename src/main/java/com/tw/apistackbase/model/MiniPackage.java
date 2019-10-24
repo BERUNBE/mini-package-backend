@@ -6,11 +6,11 @@ import javax.persistence.Id;
 @Entity
 public class MiniPackage {
     @Id
-    private long packageNumber;
+    private Long packageNumber;
 
     private String receiver;
 
-    private long phone;
+    private Long phone;
 
     private String status;
 
