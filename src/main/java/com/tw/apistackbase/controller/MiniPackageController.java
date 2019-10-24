@@ -18,4 +18,9 @@ public class MiniPackageController {
     public ResponseEntity<MiniPackage> createMiniPackage(@RequestBody MiniPackage miniPackage) {
         return new ResponseEntity<>(miniPackageService.createMiniPackage(miniPackage), HttpStatus.CREATED);
     }
+
+    @GetMapping(produces = {"application/json"})
+    public ResponseEntity<Iterable<MiniPackage>> getAllMiniPackages() {
+        return new ResponseEntity<>(miniPackageService.getAllMiniPackages(), HttpStatus.OK);
+    }
 }
