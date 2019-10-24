@@ -18,6 +18,6 @@ public class MiniPackageService {
     }
 
     public List<MiniPackage> getAllMiniPackages() {
-        return null;
+        return miniPackageRepository.findAll();
     }
 }
