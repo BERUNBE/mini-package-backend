@@ -37,7 +37,7 @@ public class MiniPackageControllerTest {
         miniPackage.setReceiver("Alpha");
         when(miniPackageService.createMiniPackage(any())).thenReturn(miniPackage);
 
-        ResultActions result = mvc.perform(post("/packages")
+        ResultActions result = mvc.perform(post("/api/packages")
                 .contentType(APPLICATION_JSON)
                 .content(mapToJson(miniPackage)));
 
@@ -53,7 +53,7 @@ public class MiniPackageControllerTest {
         miniPackage2.setReceiver("Bravo");
         when(miniPackageService.getAllMiniPackages()).thenReturn(asList(miniPackage1, miniPackage2));
 
-        ResultActions result = mvc.perform(get("/packages"));
+        ResultActions result = mvc.perform(get("/api/packages"));
 
         result.andExpect(status().isOk())
                 .andExpect(jsonPath("$.[0]receiver").value("Alpha"))

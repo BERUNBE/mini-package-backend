@@ -16,7 +16,7 @@ public class MiniPackage {
 
     private String bookingTime;
 
-    public long getPackageNumber() {
+    public Long getPackageNumber() {
         return packageNumber;
     }
 
@@ -32,7 +32,7 @@ public class MiniPackage {
         this.receiver = receiver;
     }
 
-    public long getPhone() {
+    public Long getPhone() {
         return phone;
     }
 
